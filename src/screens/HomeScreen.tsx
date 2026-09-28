@@ -31,11 +31,11 @@ export function HomeScreen({ navigation }: Props) {
       style={[common.screen, { paddingTop: insets.top }]}
       contentContainerStyle={{ paddingBottom: insets.top + 28 }}
     >
-      <Reveal>
-        <Image source={assets.home} style={styles.hero} />
+      <Reveal style={styles.hero}>
+        <Image source={assets.home} style={styles.heroImage} resizeMode="cover" />
       </Reveal>
       <ContentReveal style={[common.content, layout.contentStyle]}>
-        <Text style={common.label}>TONIGHT AT GREAT CANADIAN</Text>
+        <Text style={common.label}>Evening Venue Guide</Text>
         <Text style={[common.subtitle, { fontWeight: '400' }]}>
           {event ? eventDate(event.startAt, true) : 'Your next evening awaits'}
         </Text>
@@ -90,11 +90,12 @@ export function HomeScreen({ navigation }: Props) {
   );
 }
 const styles = StyleSheet.create({
-  hero: { width: '100%', aspectRatio: 1.94 },
+  hero: { width: '100%', aspectRatio: 1.94, overflow: 'hidden' },
+  heroImage: { width: '100%', height: '100%' },
   countdown: {
     backgroundColor: colors.card,
     borderWidth: 1,
-    borderColor: colors.gold,
+    borderColor: colors.accent,
     padding: 20,
     gap: 14,
   },
@@ -103,6 +104,6 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontSize: 36,
     letterSpacing: 3,
-    color: colors.gold,
+    color: colors.accent,
   },
 });

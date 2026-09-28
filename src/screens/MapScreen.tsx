@@ -90,7 +90,7 @@ export function MapScreen({ navigation, route }: Props) {
                   >
                     <Polyline
                       points={paths[routing]}
-                      stroke="#fff0aa"
+                      stroke={colors.accent}
                       strokeWidth={1.2}
                       fill="none"
                       strokeDasharray="2 1"
@@ -114,7 +114,7 @@ export function MapScreen({ navigation, route }: Props) {
                     ]}
                   >
                     <View style={styles.markerIcon}>
-                      <Icon name={item.symbol} color={colors.gold} size={21} />
+                      <Icon name={item.symbol} color={colors.accent} size={21} />
                     </View>
                     <Text
                       style={[
@@ -140,7 +140,7 @@ export function MapScreen({ navigation, route }: Props) {
           ]}
         >
           <Notice>
-            <Text style={{ color: colors.gold }}>
+            <Text style={{ color: colors.accent }}>
               Route from the main entrance{'\n'}
             </Text>
             {destination.directions}
@@ -172,7 +172,7 @@ export function MapScreen({ navigation, route }: Props) {
             <Image source={venue.image} style={styles.venueImage} />
             <Text style={common.muted}>{venue.description}</Text>
             <Text style={common.muted}>
-              <Text style={{ color: colors.gold }}>Opening hours </Text>
+              <Text style={{ color: colors.accent }}>Opening hours </Text>
               {venue.hours}
             </Text>
             <Text style={common.muted}>{venue.features}</Text>
@@ -258,9 +258,9 @@ const styles = StyleSheet.create({
     minHeight: 60,
   },
   markerIcon: {
-    backgroundColor: colors.red,
+    backgroundColor: colors.selected,
     borderWidth: 1,
-    borderColor: colors.gold,
+    borderColor: colors.accent,
     width: 36,
     height: 36,
     borderRadius: 18,
@@ -270,8 +270,8 @@ const styles = StyleSheet.create({
   markerLabel: {
     backgroundColor: colors.header,
     borderWidth: 1,
-    borderColor: colors.gold,
-    color: colors.gold,
+    borderColor: colors.accent,
+    color: colors.accent,
     fontSize: 9,
     fontWeight: '700',
     letterSpacing: 1,

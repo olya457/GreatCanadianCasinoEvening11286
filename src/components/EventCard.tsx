@@ -32,7 +32,7 @@ export function Schedule({
         >
           {minimal ? 'View Schedule' : 'SCHEDULE'}
         </Text>
-        <Icon name={open ? 'up' : 'down'} size={16} color={colors.gold} />
+        <Icon name={open ? 'up' : 'down'} size={16} color={colors.accent} />
       </Pressable>
       {open &&
         event.schedule.map(item => (
@@ -59,8 +59,9 @@ export function EventCard({
         accessibilityRole="button"
         accessibilityLabel={`Open ${event.title}`}
         onPress={onOpen}
+        style={styles.imageFrame}
       >
-        <Image source={event.image} style={styles.image} />
+        <Image source={event.image} style={styles.image} resizeMode="cover" />
       </Pressable>
       <View style={styles.body}>
         <Text style={common.label}>{getVenue(event.venueId).name}</Text>
@@ -82,7 +83,8 @@ export function EventCard({
   );
 }
 const styles = StyleSheet.create({
-  image: { width: '100%', aspectRatio: 2.25 },
+  imageFrame: { width: '100%', aspectRatio: 2.25, overflow: 'hidden' },
+  image: { width: '100%', height: '100%' },
   body: { padding: 16, gap: 10 },
   meta: { color: colors.muted, fontSize: 12, lineHeight: 19 },
   schedule: {
@@ -100,5 +102,5 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: colors.border,
   },
-  time: { color: colors.gold, fontSize: 12, width: 76 },
+  time: { color: colors.accent, fontSize: 12, width: 76 },
 });

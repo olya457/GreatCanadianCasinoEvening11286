@@ -1,14 +1,20 @@
 import { Platform, StyleSheet } from 'react-native';
 export const colors = {
-  background: '#06121f',
-  header: '#0d1d2e',
-  card: '#14273b',
-  border: '#293b4d',
-  text: '#f5f1e8',
-  muted: '#9ba9b9',
-  gold: '#d9ac4c',
-  red: '#b7253d',
-  green: '#4da586',
+  background: '#041b15',
+  header: '#082b22',
+  card: '#103b2f',
+  border: '#285849',
+  text: '#f1f8f4',
+  muted: '#aac4b9',
+  accent: '#72d9ad',
+  selected: '#146447',
+  green: '#48b88c',
+  buttonStart: '#18734f',
+  buttonEnd: '#0c503b',
+  overlay: '#02140fee',
+  overlayLight: '#04291f33',
+  overlayMid: '#04291f80',
+  overlayDeep: '#021810f5',
 };
 export const serif = Platform.select({ ios: 'Georgia', android: 'serif' })!;
 export const common = StyleSheet.create({

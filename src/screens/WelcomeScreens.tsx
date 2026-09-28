@@ -19,7 +19,7 @@ import { Button } from '../components/UI';
 import { useApp } from '../state/AppProvider';
 
 const loadingHtml =
-  '<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{background:transparent;margin:0;height:100%;overflow:hidden}body{display:flex;align-items:center;justify-content:center}.spinner{width:32px;height:32px;position:relative;animation:spin 1.1s linear infinite}.spinner i{position:absolute;width:7px;height:7px;border-radius:50%;background:#d9ac4c;left:13px;top:0;transform-origin:3px 16px}.spinner i:nth-child(2){transform:rotate(60deg);opacity:.8}.spinner i:nth-child(3){transform:rotate(120deg);opacity:.6}.spinner i:nth-child(4){transform:rotate(180deg);opacity:.4}.spinner i:nth-child(5){transform:rotate(240deg);opacity:.2}.spinner i:nth-child(6){transform:rotate(300deg);opacity:.1}@keyframes spin{to{transform:rotate(360deg)}}</style></head><body><div class="spinner"><i></i><i></i><i></i><i></i><i></i><i></i></div><script>setTimeout(function(){window.ReactNativeWebView.postMessage("finished")},4000)</script></body></html>';
+  `<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{background:transparent;margin:0;height:100%;overflow:hidden}body{display:flex;align-items:center;justify-content:center}.spinner{width:32px;height:32px;position:relative;animation:spin 1.1s linear infinite}.spinner i{position:absolute;width:7px;height:7px;border-radius:50%;background:${colors.accent};left:13px;top:0;transform-origin:3px 16px}.spinner i:nth-child(2){transform:rotate(60deg);opacity:.8}.spinner i:nth-child(3){transform:rotate(120deg);opacity:.6}.spinner i:nth-child(4){transform:rotate(180deg);opacity:.4}.spinner i:nth-child(5){transform:rotate(240deg);opacity:.2}.spinner i:nth-child(6){transform:rotate(300deg);opacity:.1}@keyframes spin{to{transform:rotate(360deg)}}</style></head><body><div class="spinner"><i></i><i></i><i></i><i></i><i></i><i></i></div><script>setTimeout(function(){window.ReactNativeWebView.postMessage("finished")},4000)</script></body></html>`;
 export function SplashScreen({ onFinish }: { onFinish: () => void }) {
   const { height, width } = useWindowDimensions();
   const layout = useResponsiveLayout();
@@ -37,7 +37,7 @@ export function SplashScreen({ onFinish }: { onFinish: () => void }) {
   return (
     <ImageBackground source={assets.splash} style={common.flex}>
       <LinearGradient
-        colors={['#00000005', '#00000022', '#000000ee']}
+        colors={[colors.overlayLight, colors.overlayMid, colors.overlayDeep]}
         pointerEvents="none"
         style={StyleSheet.absoluteFill}
       />
@@ -66,14 +66,13 @@ export function SplashScreen({ onFinish }: { onFinish: () => void }) {
               ),
               borderRadius: 24,
               borderWidth: 1,
-              borderColor: '#d9ac4c55',
+              borderColor: colors.border,
             }}
           />
           <Text style={styles.ornament}>──── ◇ ────</Text>
           <Text style={[styles.brand, { fontSize: height < 650 ? 28 : 36 }]}>
-            Great Canadian
+            Evening Venue Guide
           </Text>
-          <Text style={styles.evening}>EVENING</Text>
           <Text style={styles.ornament}>──── ◇ ────</Text>
           <View style={styles.spinner}>
             <WebView
@@ -120,7 +119,7 @@ export function OnboardingScreen() {
   return (
     <ImageBackground source={assets.onboarding[page]} style={common.flex}>
       <LinearGradient
-        colors={['transparent', '#00000011', '#000000ee']}
+        colors={[colors.overlayLight, colors.overlayMid, colors.overlayDeep]}
         locations={[0, 0.35, 1]}
         pointerEvents="none"
         style={StyleSheet.absoluteFill}
@@ -161,7 +160,8 @@ export function OnboardingScreen() {
                 style={[
                   styles.dot,
                   {
-                    backgroundColor: index === page ? colors.gold : '#ffffff55',
+                    backgroundColor:
+                      index === page ? colors.accent : colors.border,
                   },
                 ]}
               />
@@ -200,18 +200,13 @@ const styles = StyleSheet.create({
     gap: 18,
     paddingVertical: 24,
   },
-  ornament: { color: colors.gold, letterSpacing: 2, marginTop: 10 },
+  ornament: { color: colors.accent, letterSpacing: 2, marginTop: 10 },
   brand: {
     fontFamily: serif,
-    color: colors.gold,
+    color: colors.accent,
     textAlign: 'center',
+    paddingHorizontal: 24,
     fontWeight: '700',
-  },
-  evening: {
-    fontFamily: serif,
-    color: colors.gold,
-    letterSpacing: 5,
-    fontSize: 19,
   },
   spinner: { height: 54, width: 70 },
   webview: { flex: 1, backgroundColor: 'transparent' },

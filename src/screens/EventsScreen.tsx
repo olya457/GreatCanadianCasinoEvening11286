@@ -81,6 +81,6 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     borderRadius: 4,
   },
-  selected: { backgroundColor: colors.red, borderColor: colors.red },
+  selected: { backgroundColor: colors.selected, borderColor: colors.selected },
   chipText: { fontSize: 12, color: colors.muted, letterSpacing: 0.4 },
 });

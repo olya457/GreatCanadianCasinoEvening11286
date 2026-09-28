@@ -76,8 +76,8 @@ export function EventDetailsScreen({
   };
   return (
     <ScrollView style={common.screen}>
-      <Reveal replayKey={event.id}>
-        <Image source={event.image} style={styles.image} />
+      <Reveal replayKey={event.id} style={styles.imageFrame}>
+        <Image source={event.image} style={styles.image} resizeMode="cover" />
       </Reveal>
       <ContentReveal
         replayKey={event.id}
@@ -110,7 +110,7 @@ export function EventDetailsScreen({
               value={enabled}
               disabled={busy || Date.parse(event.startAt) < Date.now()}
               onValueChange={on => change(on)}
-              trackColor={{ false: '#153454', true: colors.gold }}
+              trackColor={{ false: colors.border, true: colors.accent }}
               thumbColor={colors.background}
             />
           </View>
@@ -168,7 +168,8 @@ export function EventDetailsScreen({
   );
 }
 const styles = StyleSheet.create({
-  image: { width: '100%', aspectRatio: 1.8 },
+  imageFrame: { width: '100%', aspectRatio: 1.8, overflow: 'hidden' },
+  image: { width: '100%', height: '100%' },
   reminder: { padding: 16, gap: 16, borderRadius: 4 },
   select: {
     backgroundColor: colors.header,

@@ -136,7 +136,7 @@ export function HelpScreen() {
               <Text
                 style={[
                   common.label,
-                  { color: message.role === 'user' ? '#f5dce0' : colors.gold },
+                  { color: message.role === 'user' ? colors.text : colors.accent },
                 ]}
               >
                 {message.role === 'user'
@@ -152,7 +152,7 @@ export function HelpScreen() {
                     common.muted,
                     {
                       fontSize: 10,
-                      color: message.role === 'user' ? '#f5dce0' : colors.muted,
+                      color: message.role === 'user' ? colors.text : colors.muted,
                     },
                   ]}
                 >
@@ -239,7 +239,7 @@ export function HelpScreen() {
               <Icon
                 name={expanded.includes(index) ? 'up' : 'down'}
                 size={16}
-                color={colors.gold}
+                color={colors.accent}
               />
             </Pressable>
             {expanded.includes(index) && (
@@ -254,7 +254,7 @@ export function HelpScreen() {
 const styles = StyleSheet.create({
   chat: { padding: 16, gap: 12, minHeight: 155 },
   bubble: { maxWidth: '92%', padding: 13, gap: 6, borderRadius: 4 },
-  user: { alignSelf: 'flex-end', backgroundColor: colors.red },
+  user: { alignSelf: 'flex-end', backgroundColor: colors.selected },
   reply: {
     alignSelf: 'flex-start',
     backgroundColor: colors.header,

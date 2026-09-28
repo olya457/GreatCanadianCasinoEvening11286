@@ -112,7 +112,7 @@ export function TaxiScreen() {
     return (
       <Screen title="Your Ride">
         <Notice>
-          <Text style={{ color: colors.gold, fontWeight: '700' }}>
+          <Text style={{ color: colors.accent, fontWeight: '700' }}>
             {active.status === 'arrived'
               ? 'Your car has arrived'
               : 'Taxi confirmed'}
@@ -198,7 +198,7 @@ export function TaxiScreen() {
                   common.text,
                   { fontSize: 16 },
                   draft.vehicle === item.id && {
-                    color: colors.gold,
+                    color: colors.accent,
                     fontWeight: '700',
                   },
                 ]}
@@ -208,7 +208,7 @@ export function TaxiScreen() {
               <Text style={common.muted}>${item.rate.toFixed(2)} / km</Text>
             </View>
             {draft.vehicle === item.id && (
-              <Icon name="check" color={colors.gold} />
+              <Icon name="check" color={colors.accent} />
             )}
           </Pressable>
         ))}
@@ -282,7 +282,7 @@ export function TaxiScreen() {
         <InfoRow label="Estimated arrival" value="Provided by taxi service" />
       </View>
       {draft.distance.length > 0 && fare === null && (
-        <Text style={{ color: colors.gold }}>
+        <Text style={{ color: colors.accent }}>
           Enter a distance between 0 and 1,000 km and choose a vehicle.
         </Text>
       )}
@@ -403,7 +403,7 @@ const styles = StyleSheet.create({
     gap: 12,
     alignItems: 'center',
   },
-  selected: { borderColor: colors.gold, borderLeftWidth: 3 },
+  selected: { borderColor: colors.accent, borderLeftWidth: 3 },
   info: {
     padding: 15,
     borderBottomWidth: 1,

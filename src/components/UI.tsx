@@ -57,7 +57,9 @@ export function Button({
         <LinearGradient
           pointerEvents="none"
           colors={
-            outline ? ['transparent', 'transparent'] : ['#e0b655', '#cfa043']
+            outline
+              ? ['transparent', 'transparent']
+              : [colors.buttonStart, colors.buttonEnd]
           }
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
@@ -65,13 +67,13 @@ export function Button({
         />
         {busy ? (
           <ActivityIndicator
-            color={outline ? colors.gold : colors.background}
+            color={outline ? colors.accent : colors.text}
           />
         ) : (
           <Text
             style={[
               styles.buttonText,
-              { color: outline ? colors.gold : colors.background },
+              { color: outline ? colors.accent : colors.text },
             ]}
           >
             {title}
@@ -136,7 +138,7 @@ export function Input(props: TextInputProps) {
   return (
     <TextInput
       placeholderTextColor={colors.muted}
-      selectionColor={colors.gold}
+      selectionColor={colors.accent}
       {...props}
       style={[common.input, props.style]}
     />
@@ -224,7 +226,7 @@ const styles = StyleSheet.create({
   scrollContent: { flexGrow: 1 },
   compactButton: { paddingHorizontal: 12, minHeight: 44 },
   button: { borderRadius: 4, overflow: 'hidden', flexShrink: 0 },
-  outline: { borderWidth: 1, borderColor: colors.gold },
+  outline: { borderWidth: 1, borderColor: colors.accent },
   buttonInner: {
     minHeight: 48,
     paddingHorizontal: 20,
@@ -245,7 +247,7 @@ const styles = StyleSheet.create({
   },
   overlay: {
     flex: 1,
-    backgroundColor: '#020810dd',
+    backgroundColor: colors.overlay,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
@@ -267,6 +269,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.card,
     padding: 16,
     borderLeftWidth: 2,
-    borderColor: colors.gold,
+    borderColor: colors.accent,
   },
 });

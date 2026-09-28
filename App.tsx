@@ -22,7 +22,7 @@ function AppContent() {
         <Pressable
           onPress={retrySave}
           accessibilityRole="button"
-          style={{ padding: 12, backgroundColor: colors.red }}
+          style={{ padding: 12, backgroundColor: colors.selected }}
         >
           <Text style={common.text}>{error}</Text>
         </Pressable>

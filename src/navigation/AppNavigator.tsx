@@ -76,7 +76,7 @@ function TabButtons({
     return null;
   }
   return (
-    <View style={[styles.bar, { paddingBottom: Math.max(insets.bottom, 10) }]}>
+    <View style={[styles.bar, { paddingBottom: Math.max(insets.bottom, 10) + 20 }]}>
       {tabs.map(tab => (
         <Pressable
           key={tab.name}
@@ -89,7 +89,7 @@ function TabButtons({
           {active === tab.name && <View style={styles.indicator} />}
           <Icon
             name={tab.icon}
-            color={active === tab.name ? colors.gold : colors.muted}
+            color={active === tab.name ? colors.accent : colors.muted}
             size={22}
           />
         </Pressable>
@@ -123,7 +123,7 @@ const theme = {
     background: colors.background,
     card: colors.header,
     text: colors.text,
-    primary: colors.gold,
+    primary: colors.accent,
     border: colors.border,
   },
 };
@@ -162,7 +162,7 @@ export function AppNavigator() {
       <Stack.Navigator
         screenOptions={{
           headerStyle: { backgroundColor: colors.header },
-          headerTintColor: colors.gold,
+          headerTintColor: colors.accent,
           headerShadowVisible: false,
           contentStyle: { backgroundColor: colors.background },
         }}
@@ -212,6 +212,6 @@ const styles = StyleSheet.create({
     top: 0,
     height: 2,
     width: 28,
-    backgroundColor: colors.red,
+    backgroundColor: colors.selected,
   },
 });
