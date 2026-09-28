@@ -29,7 +29,7 @@ export const events: Event[] = [
       },
       {
         time: '9:30 PM',
-        title: 'Casino Tour',
+        title: 'Tour',
       },
       {
         time: '10:30 PM',
@@ -135,7 +135,7 @@ export const events: Event[] = [
       },
       {
         time: '7:45 PM',
-        title: 'Casino Floor Introduction',
+        title: 'Floor Introduction',
       },
       {
         time: '8:15 PM',
@@ -308,14 +308,14 @@ export const events: Event[] = [
   },
   {
     id: 'event-9',
-    title: 'Casino Jazz Night',
+    title: 'Jazz Night',
     venueId: 'concert',
     date: '10-17',
     time: '8:30 PM–11:30 PM',
     summary:
       'An intimate jazz performance inspired by the glamour and rhythm of classic casino evenings.',
     description: [
-      'Casino Jazz Night brings live jazz, warm lighting, and an elegant lounge atmosphere to the concert hall. Guests can enjoy a curated selection of classic standards and modern arrangements.',
+      'Jazz Night brings live jazz, warm lighting, and an elegant lounge atmosphere to the concert hall. Guests can enjoy a curated selection of classic standards and modern arrangements.',
       'The event is ideal for a relaxed evening with cocktails, music, and premium surroundings. Limited lounge seating is available near the stage.',
     ],
     schedule: [

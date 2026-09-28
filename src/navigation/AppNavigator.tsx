@@ -28,7 +28,7 @@ const navigationRef = createNavigationContainerRef<RootStackParams>();
 const tabs: { name: keyof TabParams; label: string; icon: string }[] = [
   { name: 'Home', label: 'Tonight', icon: 'home' },
   { name: 'Events', label: 'Events', icon: 'calendar' },
-  { name: 'Map', label: 'Casino Map', icon: 'map' },
+  { name: 'Map', label: 'Map', icon: 'map' },
   { name: 'Taxi', label: 'Taxi', icon: 'car' },
   { name: 'Checklist', label: 'Evening Checklist', icon: 'checklist' },
   { name: 'Help', label: 'Help and FAQ', icon: 'help' },

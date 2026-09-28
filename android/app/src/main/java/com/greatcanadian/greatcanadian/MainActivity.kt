@@ -1,4 +1,4 @@
-package com.greatcanadiancasinoevening
+package com.greatcanadian.casinoevening
 
 import android.os.Bundle
 import com.facebook.react.ReactActivity

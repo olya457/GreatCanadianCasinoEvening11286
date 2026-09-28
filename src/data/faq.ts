@@ -2,7 +2,7 @@ export const faqs = [
   {
     question: 'Where can I find the exact location of my event?',
     answer:
-      'You can find the event location on the event details screen. Use the Casino Map to view the venue and locate the correct entrance.',
+      'You can find the event location on the event details screen. Use the Map to view the venue and locate the correct entrance.',
     keywords: ['location', 'entrance', 'where'],
   },
   {
@@ -32,7 +32,7 @@ export const faqs = [
   {
     question: 'Where can I find the casino complex map?',
     answer:
-      'Open Casino Map from the bottom navigation menu. It shows the main venues and the events taking place at each location.',
+      'Open Map from the bottom navigation menu. It shows the main venues and the events taking place at each location.',
     keywords: ['map', 'navigate'],
   },
   {

@@ -35,7 +35,7 @@ export function HomeScreen({ navigation }: Props) {
         <Image source={assets.home} style={styles.hero} />
       </Reveal>
       <ContentReveal style={[common.content, layout.contentStyle]}>
-        <Text style={common.label}>TONIGHT AT GREAT CANADIAN CASINO</Text>
+        <Text style={common.label}>TONIGHT AT GREAT CANADIAN</Text>
         <Text style={[common.subtitle, { fontWeight: '400' }]}>
           {event ? eventDate(event.startAt, true) : 'Your next evening awaits'}
         </Text>
@@ -79,7 +79,7 @@ export function HomeScreen({ navigation }: Props) {
           </View>
           <View style={!layout.narrow && common.flex}>
             <Button
-              title="EXPLORE CASINO"
+              title="EXPLORE COMPLEX"
               outline
               onPress={() => navigation.navigate('Map')}
             />

@@ -133,7 +133,7 @@ export function EventDetailsScreen({
         <Text style={common.subtitle}>{venue.name}</Text>
         <Text style={common.muted}>{venue.description}</Text>
         <Button
-          title="VIEW ON CASINO MAP"
+          title="VIEW ON MAP"
           outline
           onPress={() =>
             navigation.navigate('Main', {

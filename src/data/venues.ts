@@ -19,8 +19,8 @@ export const venues = [
   },
   {
     id: 'casino' as VenueId,
-    name: 'Casino',
-    label: 'CASINO',
+    name: 'Gaming Hall',
+    label: 'GAMING HALL',
     symbol: 'spade',
     image: assets.casino,
     x: 81,

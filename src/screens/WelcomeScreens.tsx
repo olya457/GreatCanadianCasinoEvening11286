@@ -71,7 +71,7 @@ export function SplashScreen({ onFinish }: { onFinish: () => void }) {
           />
           <Text style={styles.ornament}>──── ◇ ────</Text>
           <Text style={[styles.brand, { fontSize: height < 650 ? 28 : 36 }]}>
-            Great Canadian{'\n'}Casino
+            Great Canadian
           </Text>
           <Text style={styles.evening}>EVENING</Text>
           <Text style={styles.ornament}>──── ◇ ────</Text>

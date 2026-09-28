@@ -56,7 +56,7 @@ export function MapScreen({ navigation, route }: Props) {
   };
   return (
     <View style={common.screen}>
-      <Header title="Casino Map" />
+      <Header title="Map" />
       <View style={[styles.mapArea, { padding: layout.spacing }]}>
         <View
           style={styles.viewport}
