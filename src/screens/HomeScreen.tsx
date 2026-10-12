@@ -35,7 +35,7 @@ export function HomeScreen({ navigation }: Props) {
         <Image source={assets.home} style={styles.heroImage} resizeMode="cover" />
       </Reveal>
       <ContentReveal style={[common.content, layout.contentStyle]}>
-        <Text style={common.label}>Evening Venue Guide</Text>
+        <Text style={common.label}>Evening Venue Concierge</Text>
         <Text style={[common.subtitle, { fontWeight: '400' }]}>
           {event ? eventDate(event.startAt, true) : 'Your next evening awaits'}
         </Text>

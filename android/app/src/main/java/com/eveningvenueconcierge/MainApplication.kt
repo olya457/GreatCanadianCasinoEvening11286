@@ -1,4 +1,4 @@
-package com.eveningvenueguide
+package com.eveningvenueconcierge
 
 import android.app.Application
 import com.facebook.react.PackageList

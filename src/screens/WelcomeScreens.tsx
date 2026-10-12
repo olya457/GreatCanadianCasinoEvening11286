@@ -71,7 +71,7 @@ export function SplashScreen({ onFinish }: { onFinish: () => void }) {
           />
           <Text style={styles.ornament}>──── ◇ ────</Text>
           <Text style={[styles.brand, { fontSize: height < 650 ? 28 : 36 }]}>
-            Evening Venue Guide
+            Evening Venue Concierge
           </Text>
           <Text style={styles.ornament}>──── ◇ ────</Text>
           <View style={styles.spinner}>
